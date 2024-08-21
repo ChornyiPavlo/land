@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+
+    <loc>https://{REPLACE_URL}/</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/romeo-and-juliet-lovers.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/curse-of-the-werewolf-megaways-lunar.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/book-of-champions-victory.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/easter-spin-delight.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/queenie-crown.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/womens-day-herstory.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/member-conduct-code.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/all-games.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+
+    <url>
+
+    <loc>https://{REPLACE_URL}/about-us.html</loc>
+
+    <lastmod>2024-08-19</lastmod>
+
+    <changefreq>weekly</changefreq>
+
+    <priority>1.0</priority>
+
+    </url>
+    </urlset>

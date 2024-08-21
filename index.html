@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="dwjs8/jtw67/jquery-3.7.1.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dwjs8/jtw67/animatecss.js"></script>
+    <script src="dwjs8/jtw67/bootstrap.bundle.min.js"></script>
+    <title>Dice Dreams</title>
+    <meta property="og:image" content="66c377bf9280b-2029757-picture.jpg"/>
+    <meta property="og:title" content="Dice Dreams"/>
+    <meta name="description"
+          content="Romeo and Juliet Lovers™ is an entertaining slot-style game based on Shakespeares famous tragedy. In this.">
+    <meta property="og:description"
+          content="Romeo and Juliet Lovers™ is an entertaining slot-style game based on Shakespeares famous tragedy. In this.">
+    <meta name="author" content=""/>
+    <link rel="stylesheet" href="dwjs8/cs8t/animate.css">
+    <link rel="stylesheet" href="dwjs8/cs8t/bootstrap-icons.css">
+    <link rel="stylesheet" href="dwjs8/cs8t/sprite16dfras.svg">
+    <link rel="stylesheet" href="dwjs8/cs8t/bootstrap.min.css">
+    <link rel="stylesheet" href="dwjs8/cs8t/button.css">
+    <meta name="twitter:image:src" content="66c377bf9280b-2029757-picture.jpg"/>
+    <link rel="shortcut icon" href="artisticstorage/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+<style>
+
+  .cookie-consent-container, .cookie-settings-modal {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #180707;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, .2);
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+  }
+
+  .cookie-settings-modal {
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    background-color: #180707;
+    color: #fff;
+    z-index: 2000;
+  }
+
+  .cookie-text {
+    margin-bottom: 20px;
+  }
+
+  .cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .cookie-buttons button, #saveCookieSettings {
+    background-color: #2f5d62;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+    width: auto;
+  }
+
+  .cookie-buttons button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.8;
+  }
+
+  .cookie-buttons button, .cookie-settings-content button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .cookie-buttons a {
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .cookie-buttons a:hover, .cookie-text a:hover {
+    text-decoration: none;
+  }
+
+  .cookie-buttons a:active,
+  .cookie-buttons a:focus,
+  .cookie-buttons a:visited,
+  .cookie-buttons a:target {
+    color: #007bff;
+  }
+
+  .cookie-text a:active,
+  .cookie-text a:focus,
+  .cookie-text a:visited,
+  .cookie-text a:target {
+    color: #007bff;
+  }
+
+
+  .cookie-settings-content {
+    padding: 20px;
+  }
+
+  .cookie-settings-content div {
+    margin-bottom: 10px;
+  }
+
+  .cookie-description {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #9f9c9c;
+  }
+
+  @media (max-width: 400px) {
+    .cookie-text {
+      font-size: 14px;
+    }
+
+    .cookie-buttons button, .cookie-settings-content button {
+      font-size: 14px;
+    }
+
+    #cookieSettings {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div id="cookieConsentContainer" class="cookie-consent-container">
+    <div class="cookie-text">By clicking on the "Accept all cookies" button, you agree to the storage of cookies on your
+        device to improve site navigation, analyze site usage, and assist in our marketing efforts. You can consult our
+        <a href="cookie-consent.html" target="_blank">Cookie Policy</a> for more information.
+    </div>
+    <div class="cookie-buttons">
+        <button id="acceptCookies">Accept All</button>
+        <button id="declineCookies">Reject All</button>
+        <a href="#" id="cookieSettings">Cookie settings</a>
+    </div>
+</div>
+
+<div id="cookieSettingsModal" class="cookie-settings-modal">
+    <div class="cookie-settings-content">
+        <h2>Cookie settings</h2>
+        <p>Adjust your cookie preferences</p>
+        <div class="cookie-option">
+            <input type="checkbox" id="analyticsCookies" checked/>
+            <label for="analyticsCookies">Analytics cookies</label>
+            <p class="cookie-description">These cookies are used to collect information about how visitors use our
+                website. We use this information to compile reports and help improve the site. Cookies collect
+                information in an anonymous form.</p>
+        </div>
+        <div class="cookie-option">
+            <input type="checkbox" id="marketingCookies" checked/>
+            <label for="marketingCookies">Marketing Cookies</label>
+            <p class="cookie-description">These cookies are used to make advertising messages more relevant to you. They
+                perform functions such as preventing the same ads from appearing repeatedly, ensuring that ads are
+                displayed correctly for advertisers, and, in some cases, selecting ads based on your interests.</p>
+        </div>
+        <button id="saveCookieSettings">Save Settings</button>
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const cookieConsentContainer = document.getElementById('cookieConsentContainer');
+        const cookieSettingsModal = document.getElementById('cookieSettingsModal');
+        const acceptCookies = document.getElementById('acceptCookies');
+        const declineCookies = document.getElementById('declineCookies');
+        const cookieSettings = document.getElementById('cookieSettings');
+        const saveCookieSettings = document.getElementById('saveCookieSettings');
+        const analyticsCookies = document.getElementById('analyticsCookies');
+        const marketingCookies = document.getElementById('marketingCookies');
+
+        const cookieName = 'SitePreference-2982';
+
+        function loadCookieSettings() {
+            const settings = localStorage.getItem(cookieName + '_settings');
+            if (settings) {
+                const cookieSettings = JSON.parse(settings);
+                analyticsCookies.checked = cookieSettings.analytics;
+                marketingCookies.checked = cookieSettings.marketing;
+            }
+        }
+
+        function checkCookieConsent() {
+            if (localStorage.getItem(cookieName + '_consent')) {
+                cookieConsentContainer.style.display = 'none';
+            } else {
+                cookieConsentContainer.style.display = 'block';
+            }
+        }
+
+        function saveCookieSettingsOnly() {
+            const settings = {
+                analytics: analyticsCookies.checked,
+                marketing: marketingCookies.checked,
+            };
+            localStorage.setItem(cookieName + '_settings', JSON.stringify(settings));
+            cookieSettingsModal.style.display = 'none';
+        }
+
+        function setCookieConsent(consent) {
+            localStorage.setItem(cookieName + '_consent', consent);
+            cookieConsentContainer.style.display = 'none';
+        }
+
+        acceptCookies.addEventListener('click', function () {
+            setCookieConsent('accepted');
+        });
+
+        declineCookies.addEventListener('click', function () {
+            setCookieConsent('declined');
+        });
+
+        saveCookieSettings.addEventListener('click', saveCookieSettingsOnly);
+
+        cookieSettings.addEventListener('click', function (e) {
+            e.preventDefault();
+            cookieSettingsModal.style.display = 'block';
+        });
+
+        loadCookieSettings();
+
+        checkCookieConsent();
+    });
+
+
+</script>
+
+<div class="top">
+    <div class="top__container container">
+        <img src="artisticstorage/18.jpg" alt="18+" width="81">
+        <div class="top__texts__logo">
+            <p class="top__text tx-17 ">
+                You can only play if you are at least 18 years old.
+            </p>
+        </div>
+        <div class="top__title tx-31-21 fw-700 Montserrat">
+            Play responsibly!
+        </div>
+        <div class="top__texts">
+            <p class="top__text tx-17 ">
+                Gambling addiction is a serious problem. If you or someone you love is struggling, seek help.
+            </p>
+        </div>
+        <div class="top__right">
+            <div class="top__text tx-17 text-center mb-8">
+                Helpline number
+            </div>
+            <div class="top__nums tx-31-21 fw-700 Montserrat text-center">
+                0808 8020 133
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<header class="header16dfras shadow-sm wrapper__3aWBi__section">
+    <div class="container">
+        <nav class="header_ldhuu7  flex-row-reverse">
+            <a class="d-flex logo16dfras header__logo16dfras flex-row-reverse"
+               href="./">
+                            <span class="logo-pic16dfras align-text-center">
+                                <img src="artisticstorage/logo.png" alt=""/>
+                            </span>
+                <span class="logo-text16dfras">Dice Dreams</span>
+            </a>
+
+            <button class="menu-btn16dfras" aria-expanded="false" aria-controls="menu-container" type="button"
+                    data-menu-button>
+                <svg class="menu-svg16dfras" aria-label="" width="45" height="45">
+                    <use class="menu-btn__icon-open" href="dwjs8/cs8t/sprite16dfras.svg#open-menu-icon">
+                    </use>
+                </svg>
+            </button>
+
+            <div class="animate__animated animate__fadeIn menu-container16dfras justify-content-lg-between"
+                 id="menu-container" data-menu>
+                <button class="menu__close-btn16dfras" type="button" data-menu-close>
+                    <svg aria-label="" width="45" height="45">
+                        <use class="menu__icon-close16dfras" href="dwjs8/cs8t/sprite16dfras.svg#modal-close">
+                        </use>
+                    </svg>
+                </button>
+
+                <ul class="menu__listhsu">
+                    <li class="menu-shd6">
+                        <a class="menu__link16dfras active16dfras" href="./#home3073">Home</a>
+                    </li>
+
+                    <li class="menu-shd6">
+                        <a class="menu__link16dfras" href="about-us.html">Our Journey</a>
+                    </li>
+
+                    <li class="menu-shd6">
+                        <a class="menu__link16dfras" href="all-games.html">Explore games</a>
+                    </li>
+
+                    <li class="menu-shd6">
+                        <a class="menu__link16dfras" href="contact-page.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="hero16dfras hero16dfras-2 scroll-35205 ">
+    <div class="container">
+        <div class="hero-wrapper16dfras">
+
+            <div class="hero-box16dfras-1 text-center">
+                <h1 class="hero__title16dfras">Dice Dreams</h1>
+                <span>35205</span>
+                <h2>Total Players</h2>
+
+            </div>
+
+            <div class="hero-box16dfras-2">
+                <h1 class="hero__title16dfras text-center text-lg-center">Welcome to Dice Dreams! Here you will find
+                    exciting games and you can try your luck. Join us and enjoy the bright moments!</h1>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="about16dfras">
+    <div class="container">
+        <h2>Our Journey</h2>
+        <p style="text-align: center; color: #fff;">+18. NO-DEPOSIT CASINO. NO REAL MONEY CASINO.
+        </p>
+        <div class="about-text16dfras"><p>Dice Dreams offers you a unique gaming experience where social casinos give
+            you the joy of gaming without having to make deposits or real money bets.</p>
+            <p>Our site is created for your convenience and safety, offering a wide variety of games that will satisfy
+                the tastes of even the most sophisticated players.</p>
+            <p>Dice Dreams stands out for its user-friendly interface and intuitive navigation, which make using the
+                site simple and enjoyable.</p>
+            <p>Here you can enjoy the game without thinking about financial risks, because all winnings remain
+                virtual.</p>
+            <p>Dice Dreams is your perfect choice for a safe and exciting leisure time in the world of social
+                casinos.</p></div>
+        <div class="about-devs-block16dfras">
+            <div class="about-devs-item16dfras">SpectralDragon Games</div>
+            <div class="about-devs-item16dfras">LinkOrder</div>
+            <div class="about-devs-item16dfras">CosmicQuest Games</div>
+        </div>
+    </div>
+</section>
+
+
+<section class="benefits16dfras img-dGSVQ-style">
+    <div class="benefits-bg-opacity section16dfras">
+        <div class="container">
+            <h2 class="benefits-titel16dfras">Our Advantage</h2>
+            <p style="color: #fff;">+18. NO-DEPOSIT CASINO. NO REAL MONEY CASINO.
+            </p>
+        </div>
+
+        <div class="benefits-pic16dfras">
+            <img src="artisticstorage/bg/bg-all-066c377cc9eea3.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <div class="benefita-list-wrapper16dfras flex-row-reverse">
+                <div class="benefits-pic-2-16dfras">
+                    <img src="artisticstorage/assets/cards_chips-066c377cc9f0f5.png" alt="">
+                </div>
+
+                <ul class="benefits-list16dfras list-unstyled">
+                    <li class="benefits-item16dfras">
+                        <div class="benefits-icon16dfras">
+                            <img src="dwjs8/cs8t/checkmark-1.png" alt="">
+                        </div>
+                        <div class="benefits-text16dfras">Quests & Challenges: Incorporating special quests and tasks
+                            into the games for added fun and challenges.
+                        </div>
+                    </li>
+                    <li class="benefits-item16dfras">
+                        <div class="benefits-icon16dfras">
+                            <img src="dwjs8/cs8t/checkmark-1.png" alt="">
+                        </div>
+                        <div class="benefits-text16dfras">Progressive Jackpots: Virtual jackpots that increase with each
+                            game.
+                        </div>
+                    </li>
+                    <li class="benefits-item16dfras">
+                        <div class="benefits-icon16dfras">
+                            <img src="dwjs8/cs8t/checkmark-1.png" alt="">
+                        </div>
+                        <div class="benefits-text16dfras">Interactive Chat Rooms: Chat rooms to chat and share tips and
+                            strategies with other players.
+                        </div>
+                    </li>
+                    <li class="benefits-item16dfras">
+                        <div class="benefits-icon16dfras">
+                            <img src="dwjs8/cs8t/checkmark-1.png" alt="">
+                        </div>
+                        <div class="benefits-text16dfras">Mini-Games & Bonuses: Include mini-games and bonus rounds in
+                            the main games for extra entertainment.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="games16dfras section16dfras container--SRTTt--div">
+    <div class="container d-flex flex-column">
+        <div class="row flex-row-reverse">
+            <div class="col-12 col-md-8">
+
+                <div class="plays-item16dfras plays-item-first16dfras">
+                    <a href="romeo-and-juliet-lovers.html" class="plays-item-link-wrapper16dfras">
+                        <h3>Romeo and Juliet Lovers™</h3>
+                        <div class="plays-pic16dfras">
+                            <img src="66c377bf9280b-2029757-picture.jpg" alt="Romeo and Juliet Lovers™">
+                        </div>
+                    </a>
+                    <div class="plays-btn16dfras">
+                        <a href="romeo-and-juliet-lovers.html" class="bright-red-1">Play</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-4 plays-flex-col flex-column-reverse flex-xl-row">
+
+                <div class="plays-item16dfras">
+                    <a href="curse-of-the-werewolf-megaways-lunar.html" class="plays-item-link-wrapper16dfras">
+                        <h3>Curse of the Werewolf Megaways Lunar™</h3>
+                        <div class="plays-pic16dfras">
+                            <img src="66c377c122f44-2352161-snapshot.jpg" alt="Curse of the Werewolf Megaways Lunar™">
+                        </div>
+                    </a>
+                    <div class="plays-btn16dfras">
+                        <a href="curse-of-the-werewolf-megaways-lunar.html" class="bright-red-1">Play
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="plays-item16dfras">
+                    <a href="book-of-champions-victory.html" class="plays-item-link-wrapper16dfras">
+                        <h3>Book of Champions Victory</h3>
+                        <div class="plays-pic16dfras">
+                            <img src="portrait-66c377c27b032-9204838.jpg" alt="Book of Champions Victory">
+                        </div>
+                    </a>
+                    <div class="plays-btn16dfras">
+                        <a href="book-of-champions-victory.html" class="bright-red-1">Play
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-4">
+
+                <div class="plays-item16dfras">
+                    <a href="easter-spin-delight.html" class="plays-item-link-wrapper16dfras">
+                        <h3>Easter Spin Delight</h3>
+                        <div class="plays-pic16dfras">
+                            <img src="shot-66c377c40531a-2330959.jpg" alt="Easter Spin Delight">
+                        </div>
+                    </a>
+                    <div class="plays-btn16dfras">
+                        <a href="easter-spin-delight.html" class="bright-red-1">Play</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-4">
+
+                <div class="plays-item16dfras">
+                    <a href="queenie-crown.html" class="plays-item-link-wrapper16dfras">
+                        <h3>Queenie Crown™</h3>
+                        <div class="plays-pic16dfras">
+                            <img src="gallery-66c377c5854b7-2242091.jpg" alt="Queenie Crown™">
+                        </div>
+                    </a>
+                    <div class="plays-btn16dfras">
+                        <a href="queenie-crown.html" class="bright-red-1">Play
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-4">
+
+                <div class="plays-item16dfras">
+                    <a href="womens-day-herstory.html" class="plays-item-link-wrapper16dfras">
+                        <h3>Womens Day Herstory</h3>
+                        <div class="plays-pic16dfras">
+                            <img src="portrait_66c377c701a8c_1439469.jpg" alt="Womens Day Herstory">
+                        </div>
+                    </a>
+                    <div class="plays-btn16dfras">
+                        <a href="womens-day-herstory.html" class="bright-red-1">Play
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="subscribeAndHowtoplayBgOpacity">
+    <section class="how-toplay16dfras section16dfras">
+        <div class="container">
+            <h2 class="mb-3">The Road to Exciting Adventures: Start Playing Quickly and Easily</h2>
+            <p style="color: #fff;">+18. NO-DEPOSIT CASINO. NO REAL MONEY CASINO.
+            </p>
+            <ul class="how-toplay-list list-unstyled">
+                <li class="how-toplay-item16dfras">
+                    <span class="bright-red-1">1</span>
+                    <div class="how-toplay-item-text16dfras">Explore our catalog: Browse our extensive catalog of games
+                        and choose the one that appeals to you. Use filters by genre and popularity for convenience.
+                    </div>
+                    <div class="how-toplay-item-pic16dfras">
+                        <img src="artisticstorage/assets/roulette-066c377cc9f240.png" alt="">
+                    </div>
+                </li>
+                <li class="how-toplay-item16dfras">
+                    <span class="bright-red-1">2</span>
+                    <div class="how-toplay-item-text16dfras">Read the rules: Each game has its own section with
+                        instructions and tips. Take a moment to familiarize yourself with them before you start playing.
+                    </div>
+                    <div class="how-toplay-item-pic16dfras"><img
+                            src="artisticstorage/assets/roulette-166c377cc9f28c.png" alt=""></div>
+                </li>
+                <li class="how-toplay-item16dfras">
+                    <span class="bright-red-1">3</span>
+                    <div class="how-toplay-item-text16dfras">Click "play": Once you are ready, just click on the "play"
+                        button. The game will open in a new window in your browser.
+                    </div>
+                    <div class="how-toplay-item-pic16dfras"><img
+                            src="artisticstorage/assets/roulette-266c377cc9f2d6.png" alt=""></div>
+                </li>
+                <li class="how-toplay-item16dfras">
+                    <span class="bright-red-1">4</span>
+                    <div class="how-toplay-item-text16dfras">Share Your Experience: Use the comments feature under each
+                        game to share your feedback and read other players' opinions. Your feedback can help others
+                        choose a game.
+                    </div>
+                    <div class="how-toplay-item-pic16dfras"><img
+                            src="artisticstorage/assets/roulette-366c377cc9f31f.png" alt=""></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="subscribe16dfras">
+        <div class="container">
+            <div class="contact-bottom-box16dfras">
+                <h3 class="subscribe-titel16dfras">Don't miss any game premieres: subscribe to our notifications!</h3>
+                <p style="color: #fff;">+18. NO-DEPOSIT CASINO. NO REAL MONEY CASINO.
+                </p>
+                <div class="contact-form-wrapper16dfras class-4">
+                    <form class="form16dfras" action="subscribe.php">
+                        <input class="input-i95463030" type="text" name="name-5LffuMo4g0qx"
+                               placeholder="Enter your name" required><input name="phone-5LffuMo4g0qx"
+                                                                             class="input-i95463030" type="tel"
+                                                                             placeholder="Enter Your Phone Number"
+                                                                             required><input name="email-5LffuMo4g0qx"
+                                                                                             class="input-i95463030"
+                                                                                             type="email"
+                                                                                             placeholder="Email Address"
+                                                                                             required>
+                        <div class="policy-agreement" style="color: aliceblue;"></div>
+                        <label class="agreement-label">
+                            <input class="agreement-input" type="checkbox" name="policy" id="policy-agreement" required>
+                            <span class="agreement-text">I accept
+                                          </span>
+                            <a class="agreement-privacy-link" href="user-privacy.html"
+                               style="color: aliceblue; text-decoration: none;">Privacy policy</a>
+                        </label>
+                </div>
+
+                <button type="submit" class="submit-btn-3 common-btn16dfras">Subscribe</button>
+                </form>
+
+            </div>
+        </div>
+</div>
+</section>
+
+</div>
+
+
+<section class="disclaimer16dfras section16dfras">
+    <div class="container">
+        <h2 class="mb-3 text-center">Disclaimer</h2>
+        <div class="disclaimer-text16dfras">Our site offers safe social games where bets are made only with game
+            credits. There is no real money to win here, and this is a platform for pure enjoyment. Access to the site
+            is allowed only to adult users over 18 years old. Success on our site does not mean success in real money
+            gambling.
+        </div>
+        <div class="disclaimer-btn16dfras  text-center">
+            <a href="member-conduct-code.html" class="submit-btn-3 common-btn16dfras">Read More</a>
+        </div>
+    </div>
+</section>
+
+<section class="info section16dfras">
+    <div class="container">
+        <div class="inforow">
+            <div class="leftinfo">
+                <h5>Games are only available to people over the age of 18.</h5>
+                <div class="rightfooter__row">
+                    <div class="rightfooter__col">
+                        <div class="rightfooter__img">
+                            <a href="/" target="blank"><img src="/img/18.png" alt="18"></a>
+                        </div>
+                    </div>
+                    <div class="rightfooter__col">
+                        <div class="rightfooter__img">
+                            <a href="https://www.gamblingtherapy.org/" target="blank"><img class="fl" src="/img/gt.webp"
+                                                                                           alt="gt"></a>
+                        </div>
+                    </div>
+                    <div class="rightfooter__col">
+                        <div class="rightfooter__img">
+                            <a href="https://www.gambleaware.org/" target="blank"><img class="fl"
+                                                                                       src="/img/begamble.webp"
+                                                                                       alt="begamble"></a>
+                        </div>
+                    </div>
+                    <div class="rightfooter__col">
+                        <div class="rightfooter__img">
+                            <a href="https://www.gamcare.org.uk/" target="blank"><img class="fl" src="/img/gamcare.webp"
+                                                                                      alt="gamcare"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightinfo">
+                <h5 style="text-align: center;">Play responsibly!<br>
+                    You can only play if you are at least 18 years old.<br>
+                    Gambling can become a problem with serious consequences if not practiced responsibly.<br>
+                    18+ The site is prohibited for minors. ONJN decision NO. 4681 of 07.08.2019</h5>
+                <p class="paddl" style="margin: auto;text-align:center;">
+                    COMPLIANCE STATEMENT: WE ARE AN INDEPENDENT
+                    THIRD PARTY PROVIDING CASINO SERVICES NEWS, TIPS, OPINIONS AND TRICKS AND ALL OPINIONS ISSUED ARE
+                    OURS AND NOT THOSE OF THE BRANDS OR BRANDS PRESENT ON THESE PAGES. ALL OUR ACTIONS ARE VERIFIABLE.
+                    ALL CASINOS DISPLAY SPECIFIC TERMS AND CONDITIONS ON THEIR SITES WHICH SHOULD ALWAYS BE CONSULTED
+                    BEFORE PLAYING. ANY TERMS AND CONDITIONS WITH SPECIFIC REFERENCE TO THE GUIDELINES IN THESE ARTICLES
+                    CAN BE FOUND BELOW IN THE ARTICLE AND ON THE OPERATOR'S WEBSITE. TO CORRELATE THE RANKINGS AND
+                    RATINGS OF THE CASINOS ON THIS SITE, WE COLLECTED DATA FROM A NUMBER OF DIFFERENT SOURCES, INCLUDING
+                    RECOMMENDATIONS AND COMMENTS FROM USER EXPERIENCES. OCCASIONALLY, WE HAVE ALSO TAKEN INTO
+                    CONSIDERATION OUR OWN CLASSIFICATIONS AND ASSESSMENT ALGORITHMS, IN ADDITION TO THIRD ASSESSMENT
+                    AGENCIES. TO KEEP THIS INFORMATION FREE OF CHARGE, SOME PROCEDURES MAY BE INVOLVED BY FEATURED
+                    SERVICE PROVIDERS. WE PAY GREAT ATTENTION AND ENSURE THAT ALL THE INFORMATION PRESENTED IS UPDATED
+                    AND CORRECT, THEREFORE WE DISCLAIM ALL EXPRESS AND IMPLIED WARRANTIES REGARDING THE MARKETABILITY,
+                    APPLICABILITY AND RELEVANCE OF THE INFORMATION. THIS WEBSITE, INCLUDING ITS CONTENT AND SERVICES, IS
+                    PROVIDED "AS IS", THEREFORE, YOUR USE OF AND RELIANCE ON THE INFORMATION PRESENTED ON THIS SITE IS
+                    ENTIRELY AT YOUR OWN RISK
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="footer16dfras" style="overflow: hidden;">
+    <div class="container">
+        <div class="footer-box1-16dfras">
+            <a class="footer-logo-titel16dfras fst-normal" href="./">Dice Dreams
+            </a>
+
+            <div class="d-flex flex-column gap-3">
+                <div class="footer-box2-16dfras">
+                    <div class="footer-pic16dfras">
+                        <img src="artisticstorage/img-18.svg" alt="">
+                    </div>
+                    <div class="footer-pic16dfras">
+                        <img src="artisticstorage/assets/chips-066c377cc9f180.png" alt="">
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column gap-3">
+                    <div class="policy-16dfras">
+                        <div class="policy-item16dfras">
+                            <a href="gamingIntegrity.html">Responsible Social Gaming</a>
+                        </div>
+
+                        <div class="policy-item16dfras">
+                            <a href="member-conduct-code.html">Community rules</a>
+                        </div>
+                        <div class="policy-item16dfras">
+                            <a href="liability-disclaimer.html">Disclaimer</a>
+                        </div>
+                        <div class="policy-item16dfras">
+                            <a href="usageTerms.html">Terms & Conditions</a>
+                        </div>
+                        <div class="policy-item16dfras">
+                            <a href="user-privacy.html">Privacy policy</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-random-box-4">
+                        <div class="footer-disclaimer-text16dfras">Our site offers safe social games where bets are made
+                            only with game credits. There is no real money to win here, and this is a platform for pure
+                            enjoyment. Access to the site is allowed only to adult users over 18 years old. Success on
+                            our site does not mean success in real money gambling.
+                        </div>
+
+                        <ul class="footer-menu__listhsu list-unstyled">
+                            <li class="footer-menu-shd6">
+                                <a class="footer-menu__link16dfras active16dfras" href="./">Home</a>
+                            </li>
+
+                            <li class="footer-menu-shd6">
+                                <a class="footer-menu__link16dfras" href="about-us.html">Our Journey</a>
+                            </li>
+
+                            <li class="footer-menu-shd6">
+                                <a class="footer-menu__link16dfras" href="all-games.html">Explore games</a>
+                            </li>
+
+                            <li class="footer-menu-shd6">
+                                <a class="footer-menu__link16dfras" href="contact-page.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-box3-16dfras">
+                    <a href="./" class="footer-pic16dfras">
+                        <img src="artisticstorage/logo.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-copyright16dfras">Copyright© <span id="copyright-3">2024</span> Dice Dreams</div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    const menuBtnRef = document.querySelector('[data-menu-button]');
+    const menuIconRef = document.querySelector('.menu-svg16dfras');
+    const menuCloseRef = document.querySelector('[data-menu-close]');
+    const mobileMenuRef = document.querySelector('[data-menu]');
+    const headerRef = document.querySelector('.header16dfras');
+    const menuLinksRef = document.querySelectorAll('.menu__link16dfras');
+
+
+    function toggleFunction() {
+        let expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+        menuBtnRef.classList.toggle('is-open');
+        menuBtnRef.setAttribute('aria-expanded', !expanded);
+        mobileMenuRef.classList.toggle('is-open');
+    }
+
+    menuBtnRef.addEventListener('click', () => {
+        toggleFunction();
+    })
+
+    menuCloseRef.addEventListener('click', () => {
+        toggleFunction()
+    })
+
+    menuLinksRef.forEach((item) => {
+        item.addEventListener('click', () => {
+                if (mobileMenuRef.classList.contains("is-open")) {
+                    toggleFunction()
+                }
+            }
+        )
+    })
+</script>
+
+
+</body>
+
+</html>
+

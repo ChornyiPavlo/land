@@ -1,0 +1,637 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="dwjs8/jtw67/jquery-3.7.1.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="dwjs8/jtw67/animatecss.js"></script>
+        <script src="dwjs8/jtw67/bootstrap.bundle.min.js"></script>
+        <title>Dice Dreams | Responsible Social Gaming</title>
+        <meta property="og:image" content="main-logo.svg"/>
+        <meta property="og:title" content="Dice Dreams | Responsible Social Gaming" />
+        
+        <meta name="description" content="Dice Dreams | Responsible Social Gaming">
+        <meta property="og:description" content="Dice Dreams | Responsible Social Gaming">
+        <meta name="author" content=""/>
+        <link rel="stylesheet" href="dwjs8/cs8t/animate.css">
+        <link rel="stylesheet" href="dwjs8/cs8t/bootstrap-icons.css">
+        <link rel="stylesheet" href="dwjs8/cs8t/sprite16dfras.svg">
+        <link rel="stylesheet" href="dwjs8/cs8t/bootstrap.min.css">
+        <link rel="stylesheet" href="dwjs8/cs8t/button.css">
+        <meta name="twitter:image:src" content="main-logo.svg"/>
+        
+        
+
+        <link rel="shortcut icon" href="artisticstorage/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+
+            <style>
+            
+            </style>
+        
+        </head>
+
+        <body>
+            <style>
+
+	.cookie-consent-container, .cookie-settings-modal {
+	  display: none;
+	  position: fixed;
+	  bottom: 0;
+	  left: 0;
+	  width: 100%;
+	  background-color: #180707;
+	  box-shadow: 0 -2px 5px rgba(0,0,0,.2);
+	  z-index: 1000;
+	  padding: 20px;
+	  box-sizing: border-box;
+	  color: #fff;
+	}
+
+	.cookie-settings-modal {
+	  left: 50%;
+	  transform: translate(-50%, -30%);
+	  width: 90%;
+	  max-width: 600px;
+	  height: auto;
+	  background-color: #180707;
+	  color: #fff;
+	  z-index: 2000;
+	}
+
+	.cookie-text {
+	  margin-bottom: 20px;
+	}
+
+	.cookie-buttons{
+	  display: flex;
+	  gap: 10px;
+	  flex-wrap: wrap;
+	  align-items: center;
+	}
+
+	.cookie-buttons button, #saveCookieSettings {
+	  background-color: #2f5d62;
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	  border-radius: 0px;
+	  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+	   width: auto;
+	}
+
+	.cookie-buttons button:hover {
+	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	  opacity: 0.8;
+	}
+
+	.cookie-buttons button, .cookie-settings-content button {
+	  margin-right: 10px;
+	  padding: 10px 20px;
+	  cursor: pointer;
+	}
+
+	.cookie-buttons a {
+	  text-decoration: none;
+	  color: #007bff;
+	  cursor: pointer;
+	  text-decoration: underline;
+	}
+
+	.cookie-buttons a:hover, .cookie-text a:hover{
+	  text-decoration: none;
+	}
+
+	.cookie-buttons a:active,
+	.cookie-buttons a:focus,
+	.cookie-buttons a:visited,
+	.cookie-buttons a:target{
+	  color: #007bff;
+	}
+
+	.cookie-text a:active,
+	.cookie-text a:focus,
+	.cookie-text a:visited,
+	.cookie-text a:target{
+	  color: #007bff;
+	}
+
+
+
+	.cookie-settings-content {
+	  padding: 20px;
+	}
+
+	.cookie-settings-content div {
+	  margin-bottom: 10px;
+	}
+	.cookie-description {
+	  margin-left: 20px;
+	  font-size: 14px;
+	  color: #9f9c9c;
+	}
+	@media(max-width: 400px){
+		.cookie-text{
+			font-size: 14px;
+		}
+		.cookie-buttons button, .cookie-settings-content button{
+			font-size: 14px;
+		}
+		#cookieSettings{
+			font-size: 14px;
+		}
+	}
+</style>
+
+<div id="cookieConsentContainer" class="cookie-consent-container">
+	<div class="cookie-text">By clicking on the "Accept all cookies" button, you agree to the storage of cookies on your device to improve site navigation, analyze site usage, and assist in our marketing efforts. You can consult our <a href="cookie-consent.html" target="_blank">Cookie Policy</a> for more information.</div>
+	<div class="cookie-buttons">
+		<button id="acceptCookies">Accept All</button>
+		<button id="declineCookies">Reject All</button>
+		<a href="#" id="cookieSettings">Cookie settings</a>
+	</div>
+</div>
+
+<div id="cookieSettingsModal" class="cookie-settings-modal">
+	<div class="cookie-settings-content">
+		<h2>Cookie settings</h2>
+		<p>Adjust your cookie preferences</p>
+		<div class="cookie-option">
+			<input type="checkbox" id="analyticsCookies" checked />
+			<label for="analyticsCookies">Analytics cookies</label>
+			<p class="cookie-description">These cookies are used to collect information about how visitors use our website. We use this information to compile reports and help improve the site. Cookies collect information in an anonymous form.</p>
+		</div>
+		<div class="cookie-option">
+			<input type="checkbox" id="marketingCookies" checked />
+			<label for="marketingCookies">Marketing Cookies</label>
+			<p class="cookie-description">These cookies are used to make advertising messages more relevant to you. They perform functions such as preventing the same ads from appearing repeatedly, ensuring that ads are displayed correctly for advertisers, and, in some cases, selecting ads based on your interests.</p>
+		</div>
+		<button id="saveCookieSettings">Save Settings</button>
+	</div>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const cookieConsentContainer = document.getElementById('cookieConsentContainer');
+  const cookieSettingsModal = document.getElementById('cookieSettingsModal');
+  const acceptCookies = document.getElementById('acceptCookies');
+  const declineCookies = document.getElementById('declineCookies');
+  const cookieSettings = document.getElementById('cookieSettings');
+  const saveCookieSettings = document.getElementById('saveCookieSettings');
+  const analyticsCookies = document.getElementById('analyticsCookies');
+  const marketingCookies = document.getElementById('marketingCookies');
+
+  const cookieName = 'SitePreference-2982';
+
+  function loadCookieSettings() {
+    const settings = localStorage.getItem(cookieName + '_settings');
+    if (settings) {
+      const cookieSettings = JSON.parse(settings);
+      analyticsCookies.checked = cookieSettings.analytics;
+      marketingCookies.checked = cookieSettings.marketing;
+    }
+  }
+
+  function checkCookieConsent() {
+    if (localStorage.getItem(cookieName + '_consent')) {
+      cookieConsentContainer.style.display = 'none';
+    } else {
+      cookieConsentContainer.style.display = 'block';
+    }
+  }
+
+  function saveCookieSettingsOnly() {
+    const settings = {
+      analytics: analyticsCookies.checked,
+      marketing: marketingCookies.checked,
+    };
+    localStorage.setItem(cookieName + '_settings', JSON.stringify(settings));
+    cookieSettingsModal.style.display = 'none';
+  }
+
+  function setCookieConsent(consent) {
+    localStorage.setItem(cookieName + '_consent', consent);
+    cookieConsentContainer.style.display = 'none';
+  }
+
+  acceptCookies.addEventListener('click', function() {
+    setCookieConsent('accepted');
+  });
+
+  declineCookies.addEventListener('click', function() {
+    setCookieConsent('declined');
+  });
+
+  saveCookieSettings.addEventListener('click', saveCookieSettingsOnly);
+
+  cookieSettings.addEventListener('click', function(e) {
+    e.preventDefault();
+    cookieSettingsModal.style.display = 'block';
+  });
+
+  loadCookieSettings();
+  
+  checkCookieConsent();
+});
+
+
+
+</script>
+<div class="top">
+    <div class="top__container container">
+        <img src="artisticstorage/18.jpg" alt="18+" width="81">
+        <div class="top__texts__logo">
+            <p class="top__text tx-17 ">
+                You can only play if you are at least 18 years old.
+            </p>
+        </div>
+        <div class="top__title tx-31-21 fw-700 Montserrat">
+            Play responsibly!
+        </div>
+        <div class="top__texts">
+            <p class="top__text tx-17 ">
+                Gambling addiction is a serious problem. If you or someone you love is struggling, seek help.
+            </p>
+        </div>
+        <div class="top__right">
+            <div class="top__text tx-17 text-center mb-8">
+                Helpline number
+            </div>
+            <div class="top__nums tx-31-21 fw-700 Montserrat text-center">
+                0808 8020 133
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <header class="header16dfras shadow-sm wrapper__3aWBi__section">
+                <div class="container">
+                    <nav class="header_ldhuu7  flex-row-reverse">
+                        <a class="d-flex logo16dfras header__logo16dfras flex-row-reverse"
+                            href="./">
+                            <span class="logo-pic16dfras align-text-center">
+                                <img  src="artisticstorage/logo.png" alt="" />
+                            </span>
+                            <span class="logo-text16dfras">Dice Dreams</span>
+                        </a>
+            
+                        <button class="menu-btn16dfras" aria-expanded="false" aria-controls="menu-container" type="button"
+                            data-menu-button>
+                            <svg class="menu-svg16dfras" aria-label="" width="45" height="45">
+                                <use class="menu-btn__icon-open" href="dwjs8/cs8t/sprite16dfras.svg#open-menu-icon">
+                                </use>
+                            </svg>
+                        </button>
+            
+                        <div class="animate__animated animate__fadeIn menu-container16dfras justify-content-lg-between"
+                            id="menu-container" data-menu>
+                            <button class="menu__close-btn16dfras" type="button" data-menu-close>
+                                <svg aria-label="" width="45" height="45">
+                                    <use class="menu__icon-close16dfras" href="dwjs8/cs8t/sprite16dfras.svg#modal-close">
+                                    </use>
+                                </svg>
+                            </button>
+            
+                            <ul class="menu__listhsu">
+                                <li class="menu-shd6">
+                                    <a class="menu__link16dfras active16dfras" href="./#home3073">Home</a>
+                                </li>
+
+                                <li class="menu-shd6">
+                                    <a class="menu__link16dfras" href="about-us.html">Our Journey</a>
+                                </li>
+            
+                                <li class="menu-shd6">
+                                    <a class="menu__link16dfras" href="all-games.html">Explore games</a>
+                                </li>
+            
+                                <li class="menu-shd6">
+                                    <a class="menu__link16dfras" href="contact-page.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="hero16dfras hero16dfras-2 scroll-35205 ">
+                <div class="container">
+                    <div class="hero-wrapper16dfras">
+
+                        <div class="hero-box16dfras-1 text-center">
+                            <h1 class="hero__title16dfras">Dice Dreams</h1> 
+                            <span>35205</span> 
+                            <h2>Total Players</h2>
+                        
+                        </div>
+
+                        <div class="hero-box16dfras-2">
+                           <h1 class="hero__title16dfras text-center text-lg-center">Welcome to Dice Dreams! Here you will find exciting games and you can try your luck. Join us and enjoy the bright moments!</h1> 
+
+                        
+                        </div>  
+                    </div>
+                </div>
+            </section>
+        
+
+<div class="policy-page16dfras section16dfras">
+    <div class="container">
+        <h1>Dice Dreams | Responsible Social Gaming</h1>
+        <p>Dice Dreams is committed to supporting responsible gaming as a policy of customer care and social responsibility.</p>
+<p>We believe that we have a responsibility to you, our customers, to ensure that you enjoy your experience on our platform while remaining fully aware of the potential risks associated with PC gaming if you do not maintain control.</p>
+<p>To ensure that you continue to enjoy a safe and managed gaming experience, we fully support responsible gaming and have taken steps to help players who want to be in control of their gambling.</p>
+
+<h2>1. KEEP TRACK OF YOUR GAME</h2>
+<p>Computer games should be treated as a fun pastime. Here are some tips to help you stay in control of the game:</p>
+<ul>
+    <li>Playing computer games is a form of entertainment, but they should be played in moderation, not to escape reality or generate income by winning prizes.</li>
+    <li>Watch the time: We're so glad you're here and hope you can keep playing, but don't let PC games take up too much of your time. Just like going to the movies or bowling, we're here when you need to be entertained.</li>
+    <li>Take advantage of our game management tools: If you need a time-out, you can take a break from the game at any time by following the steps outlined in section 2.</li>
+    <li>If you think you're playing too often, then you may find it helpful to consider the self-assessment questions in section 3 below.</li>
+</ul>
+
+<h2>2. CONTROL OVER THE SITUATION</h2>
+<p>We encourage our customers to gamble responsibly, which is why we offer a variety of responsible gaming features.</p>
+
+<h3>Self-exclusion and account closure options</h3>
+<p>If you feel that you want to take a break or that your gaming has become problematic, you can voluntarily exclude yourself from the Dice Dreams platform using the tools provided in the "Profile" section of the website. You can request an exemption from the Dice Dreams platform by selecting one of the following options:</p>
+<ul>
+    <li>"Forever" (Permanent Self-Exclusion) By selecting this option and clicking on "Permanent Block", you will not be able to use our services indefinitely. This action cannot be undone by you or anyone in Dice Dreams.</li>
+    <li>for the selected period (Limited Timeout) by selecting the desired refund date and then clicking "Timeout".</li>
+</ul>
+<p>The option you select takes effect immediately. If, after this, you find that you are still able to access the Dice Dreams platform, it is your responsibility to inform us immediately by email.</p>
+<p>During any exclusion period, you will not have access to the Dice Dreams platform. If you need access to your account history and/or information, you will need to send an email to the customer support team.</p>
+<p>After the limited timeout expires, your access to the Dice Dreams platform will be restored.</p>
+<p>Once you have self-excluded and for the duration of your self-exclusion, you will no longer receive marketing communications from us. We strongly recommend that you also seek exclusion from all other gaming platforms where you have an active account. If you use social media, you should take steps to avoid receiving news or updates from us.</p>
+<p>Once self-exclusion (or any other type of closure) has been applied and for the duration of the self-exclusion, you will no longer receive any marketing material from us, however it may take up to 24 hours for the system to be updated, so you may receive marketing materials during this time, please ignore them.</p>
+<p>We strongly recommend that you also seek exclusion from all other gaming platforms where you have an active account. If you use social media, you should take steps to avoid receiving news or updates from us.</p>
+<p>We may exclude you from the Dice Dreams platform permanently or for a Limited Waiting Period at our sole discretion if there is reason to indicate that you may have problems with computer games.</p>
+
+<h2>Stop playing/closing your account</h2>
+<p>You can close your account. If you wish to do so, please send a written request to customer service via email to _client-support@protonmail.com.</p>
+<p>We reserve the right to refuse or close a Client's Account at our sole discretion, but any contractual obligations already undertaken will be fulfilled accordingly.</p>
+
+<h2>Exclusion by Unregistered Players</h2>
+<p>You can also voluntarily exclude yourself from the Dice Dreams platform if you do not have a customer account. If you wish to do so, you must send an email to _client-support@protonmail.com with your full name, full residential address, email address and age so that we can block you from registering and playing on the Dice Dreams platform in the future. This self-exclusion will only be revoked 7 days after we receive your written email asking us to ignore your previous self-exclusion request.</p>
+
+<h2>Activity Report</h2>
+<p>Information related to your games can be viewed in the "Game History" section of the Dice Dreams website and in the "Transaction History" section of the platform. For information relating to your game that goes beyond any entries displayed in the Game History, please contact customer service via email.</p>
+
+<h2>3. SELF-ASSESSMENT</h2>
+<p>If you think that your or someone else's computer game is becoming problematic, then you may find it helpful to consider the self-assessment questions below.</p>
+<ul>
+    <li>Do you often relive your gaming experience or think about the future?</li>
+    <li>Do you hide or lie about your games?</li>
+    <li>Do you get angry when someone or something interrupts the game?</li>
+    <li>Have you ever taken a break from gaming and snacked uncontrollably when you returned?</li>
+    <li>When you're frustrated, do you calm yourself down with games or do you plan to play?</li>
+    <li>Do you play early in the morning?</li>
+    <li>Do you find ways to play away from home?</li>
+    <li>Do you set limits on games and then break them by playing for hours longer than intended?</li>
+    <li>Do you lose hours of sleep because of gaming?</li>
+    <li>Are you sick, late for work, or skipping class to play?</li>
+    <li>Have you ever given up on a game, deleted it, and then returned to it?</li>
+    <li>Do you feel guilty and ashamed about your game?</li>
+    <li>Does gambling contribute to fights in your relationship?</li>
+    <li>Have gaming replaced any hobbies or sports you enjoyed?</li>
+    <li>Do you forget about appointments, responsibilities, or deadlines at work or school when you're playing?</li>
+    <li>Do you get irritated and defensive when people assume you gamble too much?</li>
+    <li>Has the time you spend playing games increased over time?</li>
+    <li>Do you transfer social events to the game?</li>
+    <li>Have you lost touch with friends and family after playing?</li>
+    <li>Do you experience strong feelings (ups, downs, anger, fear) while playing?</li>
+</ul>
+<p>The more questions you answer yes to, the more likely you are to have difficulty with the game, although some of them may be perfectly normal. To speak with someone who can give you advice and support, contact the support organizations mentioned in section 4 below.</p>
+
+<h2>4. AUXILIARY ORGANIZATIONS</h2>
+<p>If you would like to access help and support for people who have been negatively impacted by gaming, we advise you to contact Computer Gaming Addicts Anonymous (CGAA) at the following email address: <a href="mailto:helpline@cgaa.info">helpline@cgaa.info</a>.</p>
+<p><strong>Important:</strong> Please note that CGAAs are independent support services and are NOT affiliated with Dice Dreams in any way. CGAA does not provide customer support or dispute resolution services. If you would like to discuss any question or complaint related to your account, you can do so by contacting us via email <a href="mailto:_client-support@protonmail.com">at _client-support@protonmail.com</a>.</p>
+
+<h3>PLAYER PROTECTION POLICY</h3>
+
+<h4>1. PROTECTION OF MINORS</h4>
+<p>With internet access via mobile devices and homes around the world, responsible gaming relies heavily on parental controls and supervision. To ensure children's online safety, we encourage our customers to use filtering software to prevent minors from accessing inappropriate online material.</p>
+
+<h4>2. TIPS FOR PARENTS</h4>
+<ul>
+    <li>Keep your username and password in a safe place.</li>
+    <li>Do not leave your computer or device unattended when logging into your account.</li>
+    <li>Don't use Remember Me on a shared computer or device, especially if you share your computer or device with your children.</li>
+    <li>Be especially cautious about the use of all electronic and mobile devices by minors.</li>
+    <li>Do not allow minors (under 18 years of age) to participate in any gaming activity intended for adults (+18 years old).</li>
+    <li>Use filtering software to prevent your kids from accessing inappropriate material online.</li>
+    <li>If you share your device or computer with friends or family members who are under the age of majority to participate in online social gaming, we recommend that you restrict their access to gaming platforms. There are third-party services that can help with this, such as: <a href="http://www.netnanny.com">Netnanny.com</a>, <a href="http://www.cybersitter.com">Cybersitter.com</a> <a href="http://www.safetonet.com">Safetonet.com</a>.</li>
+</ul>
+
+<h4>3. TIPS FOR PLAYERS</h4>
+<ul>
+    <li>Make sure that the decision to play Dice Dreams is your personal choice.</li>
+    <li>Determine how much you'll spend before playing.</li>
+    <li>Before you start playing, read the rules of the games.</li>
+    <li>We recommend that you do not play on our platform if:</li>
+    <ul>
+        <li>it interferes with your day-to-day responsibilities;</li>
+        <li>you are in treatment or recovering from any type of addiction;</li>
+        <li>you are under the influence of alcohol or other influence; or</li>
+    </ul>
+</ul>
+    </div>
+</div>
+
+
+
+            
+            <section class="disclaimer16dfras section16dfras">
+                <div class="container">
+                    <h2 class="mb-3 text-center">Disclaimer</h2>
+                    <div class="disclaimer-text16dfras">Our site offers safe social games where bets are made only with game credits. There is no real money to win here, and this is a platform for pure enjoyment. Access to the site is allowed only to adult users over 18 years old. Success on our site does not mean success in real money gambling.</div>
+                    <div class="disclaimer-btn16dfras  text-center">
+                        <a href="member-conduct-code.html" class="submit-btn-3 common-btn16dfras">Read More</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info section16dfras">
+                <div class="container">
+                    <div class="inforow">
+                        <div class="leftinfo">
+                            <h5>Games are only available to people over the age of 18.</h5>
+                            <div class="rightfooter__row">
+                                <div class="rightfooter__col">
+                                    <div class="rightfooter__img">
+                                        <a href="/" target="blank"><img src="/img/18.png" alt="18"></a>
+                                    </div>
+                                </div>
+                                <div class="rightfooter__col">
+                                    <div class="rightfooter__img">
+                                        <a href="https://www.gamblingtherapy.org/" target="blank"><img class="fl" src="/img/gt.webp"
+                                                                                                       alt="gt"></a>
+                                    </div>
+                                </div>
+                                <div class="rightfooter__col">
+                                    <div class="rightfooter__img">
+                                        <a href="https://www.gambleaware.org/" target="blank"><img class="fl"
+                                                                                                   src="/img/begamble.webp"
+                                                                                                   alt="begamble"></a>
+                                    </div>
+                                </div>
+                                <div class="rightfooter__col">
+                                    <div class="rightfooter__img">
+                                        <a href="https://www.gamcare.org.uk/" target="blank"><img class="fl" src="/img/gamcare.webp"
+                                                                                                  alt="gamcare"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightinfo">
+                            <h5 style="text-align: center;">Play responsibly!<br>
+                                You can only play if you are at least 18 years old.<br>
+                                Gambling can become a problem with serious consequences if not practiced responsibly.<br>
+                                18+ The site is prohibited for minors. ONJN decision NO. 4681 of 07.08.2019</h5>
+                            <p class="paddl" style="margin: auto;text-align:center;">
+                                COMPLIANCE STATEMENT: WE ARE AN INDEPENDENT
+                                THIRD PARTY PROVIDING CASINO SERVICES NEWS, TIPS, OPINIONS AND TRICKS AND ALL OPINIONS ISSUED ARE
+                                OURS AND NOT THOSE OF THE BRANDS OR BRANDS PRESENT ON THESE PAGES. ALL OUR ACTIONS ARE VERIFIABLE.
+                                ALL CASINOS DISPLAY SPECIFIC TERMS AND CONDITIONS ON THEIR SITES WHICH SHOULD ALWAYS BE CONSULTED
+                                BEFORE PLAYING. ANY TERMS AND CONDITIONS WITH SPECIFIC REFERENCE TO THE GUIDELINES IN THESE ARTICLES
+                                CAN BE FOUND BELOW IN THE ARTICLE AND ON THE OPERATOR'S WEBSITE. TO CORRELATE THE RANKINGS AND
+                                RATINGS OF THE CASINOS ON THIS SITE, WE COLLECTED DATA FROM A NUMBER OF DIFFERENT SOURCES, INCLUDING
+                                RECOMMENDATIONS AND COMMENTS FROM USER EXPERIENCES. OCCASIONALLY, WE HAVE ALSO TAKEN INTO
+                                CONSIDERATION OUR OWN CLASSIFICATIONS AND ASSESSMENT ALGORITHMS, IN ADDITION TO THIRD ASSESSMENT
+                                AGENCIES. TO KEEP THIS INFORMATION FREE OF CHARGE, SOME PROCEDURES MAY BE INVOLVED BY FEATURED
+                                SERVICE PROVIDERS. WE PAY GREAT ATTENTION AND ENSURE THAT ALL THE INFORMATION PRESENTED IS UPDATED
+                                AND CORRECT, THEREFORE WE DISCLAIM ALL EXPRESS AND IMPLIED WARRANTIES REGARDING THE MARKETABILITY,
+                                APPLICABILITY AND RELEVANCE OF THE INFORMATION. THIS WEBSITE, INCLUDING ITS CONTENT AND SERVICES, IS
+                                PROVIDED "AS IS", THEREFORE, YOUR USE OF AND RELIANCE ON THE INFORMATION PRESENTED ON THIS SITE IS
+                                ENTIRELY AT YOUR OWN RISK
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        
+            <section class="footer16dfras" style="overflow: hidden;">
+                <div class="container">
+                    <div class="footer-box1-16dfras">
+                        <a class="footer-logo-titel16dfras fst-normal" href="./">Dice Dreams
+                        </a>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="footer-box2-16dfras">
+                                 <div class="footer-pic16dfras">
+                                    <img src="artisticstorage/img-18.svg" alt="">
+                                </div>  
+                                <div class="footer-pic16dfras">
+                                    <img src="artisticstorage/assets/chips-066c377cc9f180.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-column gap-3">
+                                <div class="policy-16dfras">
+                                    <div class="policy-item16dfras">
+                                        <a href="gamingIntegrity.html">Responsible Social Gaming</a>
+                                    </div>
+
+                                    <div class="policy-item16dfras">
+                                        <a href="member-conduct-code.html">Community rules</a>
+                                    </div>
+                                    <div class="policy-item16dfras">
+                                        <a href="liability-disclaimer.html">Disclaimer</a>
+                                    </div>
+                                    <div class="policy-item16dfras">
+                                        <a href="usageTerms.html">Terms & Conditions</a>
+                                    </div>
+                                    <div class="policy-item16dfras">
+                                        <a href="user-privacy.html">Privacy policy</a>
+                                    </div>
+                                </div>
+
+                                <div class="footer-random-box-4">
+                                     <div class="footer-disclaimer-text16dfras">Our site offers safe social games where bets are made only with game credits. There is no real money to win here, and this is a platform for pure enjoyment. Access to the site is allowed only to adult users over 18 years old. Success on our site does not mean success in real money gambling.</div> 
+
+                                    <ul class="footer-menu__listhsu list-unstyled">
+                                        <li class="footer-menu-shd6">
+                                            <a class="footer-menu__link16dfras active16dfras" href="./">Home</a>
+                                        </li>
+                                    
+                                        <li class="footer-menu-shd6">
+                                            <a class="footer-menu__link16dfras" href="about-us.html">Our Journey</a>
+                                        </li>
+                                    
+                                        <li class="footer-menu-shd6">
+                                            <a class="footer-menu__link16dfras" href="all-games.html">Explore games</a>
+                                        </li>
+                                    
+                                        <li class="footer-menu-shd6">
+                                            <a class="footer-menu__link16dfras" href="contact-page.html">Contact us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            
+
+                            <div class="footer-box3-16dfras">
+                                <a href="./" class="footer-pic16dfras">
+                                <img src="artisticstorage/logo.png" alt="" /> 
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer-copyright16dfras">Copyright© <span id="copyright-3">2024</span> Dice Dreams</div>
+                    </div>
+
+                </div>
+            </section>
+
+            <script>
+                const menuBtnRef = document.querySelector('[data-menu-button]');
+                const menuIconRef = document.querySelector('.menu-svg16dfras');
+                const menuCloseRef = document.querySelector('[data-menu-close]');
+                const mobileMenuRef = document.querySelector('[data-menu]');
+                const headerRef = document.querySelector('.header16dfras');
+                const menuLinksRef = document.querySelectorAll('.menu__link16dfras');
+
+
+                function toggleFunction() {
+                    let expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+                    menuBtnRef.classList.toggle('is-open');
+                    menuBtnRef.setAttribute('aria-expanded', !expanded);
+                    mobileMenuRef.classList.toggle('is-open');
+                }
+
+                menuBtnRef.addEventListener('click', () => {
+                    toggleFunction();
+                })
+
+                menuCloseRef.addEventListener('click', () => {
+                    toggleFunction()
+                })
+
+                menuLinksRef.forEach((item) => {
+                    item.addEventListener('click', () => {
+                        if (mobileMenuRef.classList.contains("is-open")) {
+                            toggleFunction()
+                        }
+                    }
+                    )
+                })
+            </script>
+
+        
+
+</body>
+</html>
