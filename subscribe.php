@@ -41,7 +41,7 @@ if(mail($to, $subject, $message, $headers)) {
         
 
         <link rel="shortcut icon" href="artisticstorage/logo.png" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css?v1">
 
             <style>
             
@@ -504,6 +504,18 @@ We're thrilled to count you among us! Brace for a trove of engaging and benefici
                                 </div>  
                                 <div class="footer-pic16dfras">
                                     <img src="artisticstorage/assets/chips-066c377cc9f180.png" alt="">
+                                </div>
+                                <div class="footer-pic16dfras">
+                                    <img src="artisticstorage/assets/thrrapy.webp" alt="">
+                                </div>
+                                <div class="footer-pic16dfras">
+                                    <img src="artisticstorage/assets/gamcare.svg" alt="">
+                                </div>
+                                <div class="footer-pic16dfras">
+                                    <img src="artisticstorage/assets/aware.svg" alt="">
+                                </div>
+                                <div class="footer-pic16dfras">
+                                    <img src="artisticstorage/assets/gamstop.jpg" alt="">
                                 </div>
                             </div>
 
